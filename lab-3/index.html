@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Font Delivery: FreakyStyle</title>
+    <style>
+        /* Define the custom font using @font-face */
+        @font-face {
+            font-family: 'FreakyStyle';
+            src: url('https://yourdomain.com/fonts/freakystyle.woff2') format('woff2'),
+                 url('https://yourdomain.com/fonts/freakystyle.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Apply the custom font to the entire body */
+        body {
+            font-family: 'FreakyStyle', sans-serif;
+            margin: 20px;
+            background-color: #fafafa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+            color: #d05486;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 40px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            background-color: #f0e68c;
+            padding: 10px;
+            border-left: 5px solid #ff4500;
+        }
+
+        /* Styling the footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Delivering Custom Fonts: FreakyStyle</h1>
+
+    <p class="highlight">
+        This page is using a font called <strong>"FreakyStyle"</strong>. It is sort of a far-out font, the likes of which are not seen on standard systems. 
+        Notice how we have embedded this custom font using the <code>@font-face</code> rule in CSS, that allows for implicit downloading of the font by the browser for use on the page. How did we do that?.
+    </p>
+
+    <h2>Font Selection: FreakyStyle</h2>
+    <p>
+        Freaky Style is a pretty unusual font, with a bold feeling to it; it has irregularly formed letters with dramatic angles.
+        It's playful but still highly readable, ensuring it stands out as a custom font and isn't confused with any standard web fonts.
+    </p>
+
+    <h2>Why Choose a Custom Font?</h2>
+    <p>
+        <strong>Stand out with unique aesthetic:</strong> Using a unique font will give an unmistakable aesthetic to the web. In this case, FreakyStyle is fun and rather exaggerated, which can easily bring in good design.
+    </p>
+    <p>
+        <strong>Control Over Design:</strong> By using the embedded font, you ensure the page will appear as a whole in every browser and device, not dependent on what fonts the users have installed on their system.
+    </p>
+    <p>
+        <strong>Readability and Flexibility:</strong> FreakyStyle is kooky but readable; it will perform well for this assignment, which specified both weird-looking and readable.
+    </p>
+
+    <h2>Step-by-Step Process for Delivering the "FreakyStyle" Font</h2>
+
+    <h3>1. Creating Fonts</h3>
+    <p>
+        Freaky Style along with other fonts was typically created in design programs like Adobe Illustrator, FontForge, or Glyphs. These programs will enable the editing of letter-by-letter and can export a font to the .WOFF and .WOFF2 formats, among other web-compatible formats.
+    </p>
+    
+    <h3>2. Host the Font File</h3>
+    <p>
+        Once the font is ready, you'll want to upload the font files, say freakystyle.woff2 to a web server or Content Delivery Network (CDN). For this example, we'll be hosting our font at <code>https://yourdomain.com/fonts/freakystyle.woff2</code>.
+    </p>
+
+    <h3>3. Use the @font-face Rule</h3>
+    <p>
+        The next CSS rule, @font-face, tells the browser to download the font from the server. Different formats are supplied for this, such as .woff2 for modern browsers and .woff for older ones, to guarantee that it would appear correctly on every platform.
+    </p>
+
+    <h3>4. Apply the Font to the Web Page</h3>
+    <p>
+        Well, once the custom font is defined using the code @font-face, we apply it on the whole page using CSS through the property font-family. In this case, it applies to the body, meaning all text appearing on the page would use FreakyStyle.
+    </p>
+
+    <h2>Detailed Process Description</h2>
+    <h3>Font Creation</h3>
+    <p>
+        FreakyStyle was designed to have full customisation on every letterform using a vector based application. Once created it was then exported to modern web friendly filetypes such as <code>.woff2</code> and <code>.woff</code> for tiny file sizes and browser support.
+    </p>
+
+    <h3>Hosting the Font</h3>
+    <p>
+        That font was loaded onto some server or Content Delivery Network, or CDN-where the browser then pulled it from when the loading of the webpage occurred. In other words, the hosting server plays an important role in providing the font file at the time of page rendering .
+    </p>
+
+    <h3>The @font-face Rule</h3>
+    <p>
+        The rule @font-face plays the most important role in embedding fonts. In this case, we will provide two formats, .woff2 and .woff, to cover all browsers so that no problem happens when the browser shows up the font. Because of its smaller size, modern browsers use .woff2, and older browsers fall back to using .woff.
+        When the web page comes up, it reads through the CSS and identifies the definition of the custom font. Then, it requests the font from the server and downloads it for application onto text. 
+    </p>
+
+    <h3>Applying Fonts</h3>
+    <p>
+        Well, once the font is downloaded, it is used by the browser to render, based on the CSS rule set within the <code>font-family</code> property. For our example, we'll use the custom "FreakyStyle" font for all of the text on the page.
+    </p>
+    
+    <h3>Fallback Fonts</h3>
+    <p>
+        We further define fallbacks here, such as <code>sans-serif</code>, in case the custom font doesn't load, so that text remains readable.
+
+    </p>
+
+
+    <footer>
+        <p>Last updated: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        // Display the last modified date
+        document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
+
+</body>
+</html>
