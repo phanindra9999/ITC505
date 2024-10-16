@@ -1,0 +1,179 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+}
+/*html and body take full height*/
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Body and Grid Layout */
+body {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header header"
+        "sidebar content ads"
+        "footer footer footer";
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    background-color: #f5eef7;
+    min-height: 100vh;
+}
+
+/* Header Section */
+header {
+    grid-area: header;
+    background-color: #3a8f8c;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Sidebar */
+nav {
+    grid-area: sidebar;
+    background-color: #d6f5e0;
+    padding: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Main Content Area */
+.content {
+    grid-area: content;
+    padding: 20px;
+    background-color: #ffe0e6;
+    border: 1px solid #ddd;
+}
+
+/* Array Row Styling */
+.array-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.array-row .box {
+    background-color: #3a8f8c;
+    color: white;
+    border: 2px solid #f5eef7;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+/* Active and Sorted States */
+.box.active {
+    background-color: yellow;
+    color: black;
+}
+
+.box.sorted {
+    background-color: lightgreen;
+    color: black;
+}
+
+.box.swapping {
+    background-color: red; /* Color for the elements currently being swapped */
+    color: white; /* Text color for better visibility */
+}
+
+/* Result Styling */
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Right Sidebar (Ads Section) */
+.ads {
+    grid-area: ads;
+    background-color: #d6f5e0; /* Light green-blue */
+    padding: 15px;
+    text-align: center;
+}
+
+.ads img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Footer Section */
+footer {
+    grid-area: footer;
+    background-color: #3a8f8c;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablet view (width between 768px and 1024px) */
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    body {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    nav, .ads {
+        display: none; /* Hide sidebar and ads for tablets to focus on the content */
+    }
+
+    .content {
+        grid-column: span 3;
+    }
+}
+
+/* Mobile view (width up to 767px) */
+@media only screen and (max-width: 767px) {
+    body {
+        display: block; /* Stack everything vertically */
+    }
+
+    header, .content, footer {
+        width: 100%; /* Full width for small screens */
+        margin: 0;
+        padding: 10px;
+    }
+
+    .content {
+        padding: 15px;
+        border: none;
+    }
+
+    nav, .ads {
+        display: none; /* Hide sidebar and ads */
+    }
+
+    .steps {
+        font-size: 14px; /* Make font smaller for better fit */
+        padding-top: 5px;
+    }
+
+    .result {
+        font-size: 16px;
+    }
+}
+
