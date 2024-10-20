@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Realms: The Time Traveler's Paradox</title>
+
+    <!-- Font link for Press Start 2P (Retro Pixel Style) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Lost Realms: The Time Traveler's Paradox</h1>
+        <p>Embark on an adventure through time and make choices that shape your destiny!</p>
+    </header>
+
+    <main>
+        <!-- Home Page -->
+        <div id="homePage" class="container">
+            <button id="startButton" class="btn">Start Game</button>
+            <button id="addendumButton" class="btn">Addendum</button>
+        </div>
+
+        <!-- Game Page -->
+        <div id="gamePage" class="container hidden">
+            <div id="story">
+                <p id="storyText">Welcome to your adventure! The time machine is malfunctioning. What do you do?</p>
+            </div>
+
+            <div id="choices">
+                <button id="choice1" onclick="chooseOption(1)">Try to stop the machine</button>
+                <button id="choice2" onclick="chooseOption(2)">Jump into the machine</button>
+            </div>
+
+            <div id="imageSection">
+                <img id="sceneImage" src="images/crossroads.jpg" alt="Scene Image">
+            </div>
+            <button id="restartButton" class="btn">Restart Game</button>
+        </div>
+
+        <!-- Addendum Page -->
+        <div id="addendumPage" class="container hidden">
+            <h2 id="addendumHeader">Addendum</h2>
+            <p>
+                <strong>Working Process:</strong> The game "Lost Realms: The Time Traveler's Paradox" was designed as an interactive narrative game where the player makes decisions to navigate through a time-traveling adventure. This structure was built on the concatenation of HTML, CSS, and JavaScript, with the JavaScript controlling the storyline logic. Every individual player's decisions result in various directions controlled by the JavaScript objects. The objects hold story data such as text, choices, and images that will help them transition smoothly between each scenario. When the game is loaded, it loads to a homepage where one has two options: either the beginning of the game or the addendum. Once the game has started, options pop up, guiding the continuation of the story. The player meets one of the various pre-defined endings based on his choices.
+                <strong>Choices:</strong> The philosophy leading the design of the game has been simplicity and player engagement. We focused on a clean user interface without distractions to put the story and choices at the center. The retro-pixel font with a color palette has been chosen to give this game a nostalgic yet modern feel, evoking classic text-based adventure games. The use of images for each scenario raises immersion and gives players a visual to base the situation they're in. Button choices for the player's interactions keep the game easily understandable and accessible, with no need for any convoluted controls. Additional background images were added for different sections-such as the home page, game, and addendum-along with slight animations to give more texture to the aesthetics .
+                <strong>Challenges and Solutions:</strong> One of the bigger challenges in building this was how to efficiently structure the game logic. The sheer number of decision points and different outcomes made handling the branching narrative somewhat cumbersome. To solve this, we laid out the storyline into modular JavaScript objects mapping each choice to its consequence. This dramatically improved code readability, along with making it easier to expand the story with new scenarios and their respective outcomes. Other challenges included making the game responsive through various devices. Using media queries within the CSS, we adapted the layout and styling for small screen sizes so that text and buttons are still accessible on mobile devices. Integral to this process has been both testing user interactions with the code and the debugging of unusual behavior in the JavaScript functions.
+                <strong>Insights Gained:</strong> Modularity and maintainability of code: During this whole development process, we learned how important it is to have modular code and maintainability. Decomposing the story into smaller, reusable JavaScript objects eased the development process by reducing redundancy. Testing with users also helped us to refine gameplay flow and user experience, thus emphasizing feedback in the development process. The other important lesson learned was to find a balance between functionality and aesthetics in order to provide a satisfying interactive experience.
+            </p>
+            <button id="backButton" class="btn">Back to Home</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script type="text/javascript">
+         var x = document.lastModified;
+         document.getElementById('lastModified').textContent = x;
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
