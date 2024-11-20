@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lights Out Game - Addendum</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f7f9fb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 20px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            margin: 10px 0 20px;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 5px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #27ae60;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-button:hover {
+            background-color: #2ecc71;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Lights Out Game - Addendum</h1>
+    <div class="container">
+        <h2>Process and Approach</h2>
+        <p>The development of the Lights Out game involved a structured process to ensure functionality, user interactivity, and visual appeal. Below is a detailed account of the steps and decisions made:</p>
+        <ul>
+            <li><strong>Planning the Game Logic:</strong> The core logic for the Lights Out game was planned first, focusing on toggling lights and setting a win condition.</li>
+            <li><strong>User Interface Design:</strong> The grid layout and intuitive button controls were implemented for ease of use.</li>
+            <li><strong>Styling:</strong> CSS enhancements were applied to make the game visually appealing and responsive.</li>
+            <li><strong>Dynamic Updates:</strong> Real-time updates for stats like Target, Moves, and Time were implemented for a better user experience.</li>
+        </ul>
+
+        <h2>Challenges Faced</h2>
+        <ul>
+            <li><strong>Ensuring Random Yet Solvable Configurations:</strong> This was addressed by simulating random clicks on the board to ensure solvability.</li>
+            <li><strong>Tracking Moves and Time:</strong> Clear logic was used to reset and track these values dynamically during gameplay.</li>
+            <li><strong>Responsive Design:</strong> Flexbox and responsive styling techniques were used to make the game layout adapt to different screen sizes.</li>
+            <li><strong>Integrating Additional Features:</strong> The Addendum button was aligned beside the New Game button using Flexbox, ensuring consistent layout and functionality.</li>
+        </ul>
+
+        <h2>Creative Choices</h2>
+        <ul>
+            <li><strong>UI Enhancements:</strong> Clear visual distinction between toggled and non-toggled cells using contrasting colors.</li>
+            <li><strong>Dynamic Game Info:</strong> A random Target value was generated at the start of each game for added variety.</li>
+            <li><strong>Flexibility in Addendum:</strong> The Addendum button was designed as a placeholder for future enhancements or instructional content.</li>
+        </ul>
+
+        <h2>Insights Gained</h2>
+        <p>Through this project, several key insights were gained:</p>
+        <ul>
+            <li>Breaking the logic into reusable functions improved code modularity and maintainability.</li>
+            <li>Subtle animations and polished visuals greatly enhance user engagement.</li>
+            <li>Responsive design is crucial for creating user-friendly layouts across devices.</li>
+            <li>Iterative testing is essential to identify edge cases and ensure smooth functionality.</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>The Lights Out game development process was both challenging and rewarding. By focusing on clear logic, interactive design, and user experience, a functional and visually appealing game was created. The flexibility to add features like the Addendum button demonstrates the scalability of the project, which can be extended in future iterations to include new challenges, themes, or additional levels.</p>
+
+        <a href="index.html" class="back-button">Back to Game</a>
+    </div>
+</body>
+</html>
