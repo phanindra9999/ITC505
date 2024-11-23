@@ -1,0 +1,212 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 16px;
+    background-size: cover;
+}
+
+/* Form Container */
+form {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    padding: 50px 40px 30px 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(0.95); /* Initial shrink effect */
+}
+
+/* Hover Effect for Form Container */
+form:hover {
+    transform: scale(1);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Heading with Letter-by-Letter Animation */
+h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    background-clip: text; /* Standard */
+    -webkit-background-clip: text; /* Webkit-based browsers (Chrome, Safari) */
+    -moz-background-clip: text; /* Firefox (for legacy support) */
+    -ms-background-clip: text; /* Internet Explorer 10+ */
+    color: transparent;
+    animation: fadeInText 3s ease-out, revealText 5s steps(10) forwards;
+}
+
+/* Keyframe for text fade-in animation */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframe for letter-by-letter reveal */
+@keyframes revealText {
+    0% {
+        width: 0; /* Initially, width is zero */
+    }
+    100% {
+        width: 100%; /* Final width covers all characters */
+    }
+}
+
+/* Form Label */
+label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+    font-weight: bold;
+}
+
+/* Input Styling */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 25px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f7f7f7;
+    transition: all 0.3s ease;
+}
+
+/* Input Focus Effect */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #ee0979; /* Hot pink focus */
+    box-shadow: 0 0 10px rgba(238, 9, 121, 0.5);
+    outline: none;
+    background-color: #fff;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+/* Submit Button Hover Effect */
+input[type="submit"]:hover {
+    background: linear-gradient(to right, #ee0979, #ff6a00);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(238, 9, 121, 0.2);
+}
+
+/* Focus Effect for Input Labels */
+input[type="text"]:focus + label,
+input[type="email"]:focus + label,
+input[type="password"]:focus + label {
+    color: #ee0979; /* Hot pink color for label */
+}
+/* Success Message Styling */
+.success-message {
+    font-size: 28px;
+    color: #ffffff;
+    background: #4e73df;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(78, 115, 223, 0.6);
+    text-align: center;
+    font-weight: bold;
+    animation: fadeIn 2s ease-out, glow 1.5s infinite alternate;
+    width: 100%;
+    margin-top: 20px;
+    position: absolute;
+    top: 20px; /* Position the success message at the top */
+}
+
+/* Error Message Styling */
+.error-message {
+    font-size: 24px;
+    color: #ffffff;
+    background: #e74c3c;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.6);
+    text-align: center;
+    font-weight: bold;
+    animation: fadeIn 2s ease-out;
+    width: 100%;
+    margin-top: 20px;
+    position: absolute;
+    top: 20px; /* Position the error message at the top */
+}
+
+/* Fade-In Effect for Success Message */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Glowing Effect for Success Message */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(78, 115, 223, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 25px rgba(78, 115, 223, 1);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+    form {
+        padding: 25px;
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    input[type="submit"] {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
